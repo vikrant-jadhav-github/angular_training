@@ -1,0 +1,6 @@
+<div class="content" *ngFor="let data of data,let i = index">
+    <h1>{{ data.name }}</h1>
+    <h2>{{ data.title }}</h2>
+    <p>{{ data.message }}</p>
+    <button (click)="onDelete(i)">Delete</button>
+</div>

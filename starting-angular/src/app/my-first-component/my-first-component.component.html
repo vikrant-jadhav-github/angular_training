@@ -1,0 +1,14 @@
+<div class="detailform">
+    <form>
+        <div class="content">
+            <input type="text" placeholder="Enter your name" [(ngModel)]="name" name="name">
+            <input type="text" placeholder="Enter your title" [(ngModel)]="title" name="title">
+            <input type="text" placeholder="Enter you message" [(ngModel)]="message" name="message">
+            <button type="submit" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="displaycontent" *ngIf="isSubmit">
+    <app-show-content [data]="data" (delete)="onDelete($event)"></app-show-content>
+</div>
